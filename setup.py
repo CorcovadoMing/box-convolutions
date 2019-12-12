@@ -32,7 +32,7 @@ distutils.ccompiler.CCompiler.compile = parallelCCompile
 
 import torch
 
-build_cuda = torch.cuda.is_available() # TODO allow cross-compiling too
+build_cuda = True
 
 source_root = 'src'
 source_files_cpp = [
