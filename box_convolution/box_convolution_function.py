@@ -52,7 +52,7 @@ class BoxConvolutionFunction(torch.autograd.Function):
 
     @staticmethod
     def backward(ctx, grad_output):
-        input_integrated, x_min, x_max, y_min, y_max, output = ctx.saved_variables
+        input_integrated, x_min, x_max, y_min, y_max, output = ctx.saved_tensors
         if output is None:
             output = torch.empty(0) # to satisfy `box_convolution_backward`'s signature
 
