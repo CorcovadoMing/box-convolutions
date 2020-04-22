@@ -1,7 +1,7 @@
 #include <torch/extension.h>
 #include <TH/THGeneral.h>
 
-#include <integral_image.h>
+#include "integral_image.h"
 
 #define CHECK_CONTIGUOUS(x) TORCH_CHECK(x.is_contiguous(), #x " must be contiguous")
 
